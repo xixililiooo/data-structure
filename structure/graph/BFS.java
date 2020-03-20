@@ -1,3 +1,5 @@
-public class BFS{
+package structure.graph;
+
+public class BFS {
     
 }

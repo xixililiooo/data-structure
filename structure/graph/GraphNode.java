@@ -1,3 +1,9 @@
+package structure.graph;
+
+import java.util.ArrayList;
+
+
+
 //图中每个节点的类
 public class GraphNode{
     /**
@@ -8,7 +14,7 @@ public class GraphNode{
     public int value; 
     public int in;
     public int  out;
-    public ArrayList<Node> nexts;
+    public ArrayList<GraphNode> nexts;
     public ArrayList<Edge> edges;
     public GraphNode(int value){
         this.value = value;

@@ -1,4 +1,4 @@
-import class_06.Edge;
+package structure.graph;
 
 public class graphGenerator{
     //根据图的点集和边集来生成一个图
@@ -8,14 +8,14 @@ public class graphGenerator{
             Integer weight = matrix[i][0];
             Integer from = matrix[i][1];
             Integer to  = matrix[i][1];
-            if(!graph.nodes.containskey(from)){
-                graph.nodes.put(from,new GraphNode(from));
+            if(!graph.nodes.containsKey(from)) {
+                graph.nodes.put(from, new GraphNode(from));
             }
-            if(!graph.nodes.containskey(to)){
+            if (!graph.nodes.containsKey(to)) {
                 graph.nodes.put(to,new GraphNode(to));
             }
-            Node fromNode = graph.nodes.get(from);
-            Node toNode  = graph.nodes.get(to);
+            GraphNode fromNode = graph.nodes.get(from);
+            GraphNode toNode  = graph.nodes.get(to);
             Edge newEdge = new Edge(weight, fromNode, toNode);
             fromNode.nexts.add(toNode);
             fromNode.out++;
